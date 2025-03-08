@@ -81,8 +81,16 @@ h4,
 h5,
 h6 {
   color: var(--heading-color);
-  font-family: var(--heading-font);
+  /*font-family: var(--heading-font);*/
+  font-family: 'Text Me One';
 }
+
+p, li{
+  font-family: 'Montserrat';
+  font-weight: 200;
+}
+
+strong { font-weight: 350; }
 
 /* PHP Email Form Messages
 ------------------------------*/
@@ -534,7 +542,7 @@ section,
 
 .hero:before {
   content: "";
-  background: color-mix(in srgb, var(--background-color), transparent 40%);
+  background: color-mix(in srgb, var(--background-color), transparent 60%);
   position: absolute;
   inset: 0;
   z-index: 2;
@@ -548,7 +556,7 @@ section,
 .hero h2 {
   margin: 0;
   font-size: 64px;
-  font-weight: 700;
+  font-weight: 500;
 }
 
 .hero p {
