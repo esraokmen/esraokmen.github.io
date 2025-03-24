@@ -1,3 +1,32 @@
+
+
+/* Custom container width and padding for the entire website */
+.container {
+  width: 90%; /* Adjust this percentage to control overall width */
+  max-width: 1400px; /* Adjust this value to set the maximum width */
+  padding-right: 15px; 
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+/* If you want even tighter or wider margins on small screens */
+@media (max-width: 768px) {
+  .container {
+    width: 95%; /* Wider on mobile (smaller margins) */
+    padding-right: 10px;
+    padding-left: 10px;
+  }
+}
+
+/* For extra large screens, you might want to cap the width */
+@media (min-width: 1600px) {
+  .container {
+    max-width: 1500px; /* Adjust this value for very large screens */
+  }
+}
+
+
 /*--------------------------------------------------------------
 # Font & Color Variables
 # Help: https://bootstrapmade.com/color-system/
@@ -938,9 +967,508 @@ section,
   border: 2px solid var(--accent-color);
 }
 
+/* Workflow Steps Styling */
+.workflow-steps {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.workflow-step {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  position: relative;
+  width: 120px;
+}
+
+.workflow-circle {
+  width: 60px;
+  height: 60px;
+  background-color: #f0f0f0;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 10px;
+  position: relative;
+  border: 2px solid rgba(0,0,0,0.1);
+}
+
+.workflow-circle span {
+  font-size: 24px;
+  font-weight: bold;
+  color: var(--accent-color);
+}
+
+.workflow-step p {
+  font-size: 14px;
+  margin-top: 5px;
+  line-height: 1.3;
+}
+
+.workflow-connector {
+  flex-grow: 1;
+  height: 2px;
+  background-color: rgba(0,0,0,0.1);
+  position: relative;
+  margin: 0 10px;
+  max-width: 100px;
+}
+
+.workflow-connector:after {
+  content: '';
+  position: absolute;
+  right: -5px;
+  top: -4px;
+  width: 0;
+  height: 0;
+  border-top: 5px solid transparent;
+  border-bottom: 5px solid transparent;
+  border-left: 8px solid rgba(0,0,0,0.1);
+}
+
+/* Asset Process Styling */
+.asset-process {
+  position: relative;
+  margin-bottom: 30px;
+}
+
+.asset-main {
+  width: 100%;
+  position: relative;
+  z-index: 1;
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.asset-step {
+  position: absolute;
+  width: 150px;
+  height: auto;
+  background: white;
+  padding: 10px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+  z-index: 2;
+  transform: rotate(-8deg);
+}
+
+.asset-step p {
+  text-align: center;
+  margin: 8px 0 0 0;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.asset-step-1 {
+  top: 20px;
+  left: 20px;
+}
+
+.asset-step-2 {
+  bottom: 20px;
+  right: 20px;
+  transform: rotate(8deg);
+}
+
+/* Process Steps Styling */
+.process-steps {
+  display: flex;
+  justify-content: space-around;
+  margin: 30px 0;
+  flex-wrap: wrap;
+}
+
+.process-step {
+  width: 100px;
+  text-align: center;
+  margin: 0 10px 20px;
+}
+
+.process-step img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  margin-bottom: 8px;
+}
+
+.process-step p {
+  font-size: 14px;
+  margin: 0;
+}
+
+/* Official Projects Styling */
+.official-project {
+  margin-bottom: 30px;
+  transition: transform 0.3s ease;
+  display: inline-block;
+  position: relative;
+}
+
+.official-project img {
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.official-project:hover {
+  transform: translateY(-5px);
+}
+
+/* Game Showcase with Space Below Phones */
+.precise-game-showcase {
+  position: relative;
+  background-color: #f0f0f0;
+  border-radius: 20px;
+  padding: 0px;
+  margin: 60px auto;
+  display: flex;
+  align-items: center;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+  max-width: 650px;
+  width: 100%;
+  overflow: visible; /* Important to allow phones to overlap */
+  height: 200px; /* Set a minimum height */
+}
+
+/* Layout containers */
+.showcase-left {
+  width: 60%;
+  position: relative;
+}
+
+.showcase-right {
+  width: 30%;
+  padding-left: 30px;
+}
+
+/* Phones Container */
+.phones-container {
+  position: relative;
+  left: -80px; /* This creates the overlap with the left edge */
+  display: flex;
+}
+
+/* Individual Phones */
+.phone {
+  position: relative;
+  width: 180px;
+  border-radius: 25px;
+  overflow: hidden;
+  box-shadow: 5px 5px 15px rgba(0,0,0,0.2);
+  margin-right: -30px; /* Create subtle overlap between phones */
+}
+
+.phone:last-child {
+  margin-right: 0;
+}
+
+.phone img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Game Info */
+.game-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.game-icon {
+  width: 80px; /* Reduced size */
+  height: 80px; /* Reduced size */
+  border-radius: 16px;
+  margin-bottom: 15px; /* Reduced margin */
+  box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+}
+
+.store-icon {
+  width: 80px; /* Reduced size */
+  height: 80px; /* Reduced size */
+  border-radius: 16px;
+  margin-bottom: 15px; /* Reduced margin */
+}
+
+.game-info h4 {
+  font-size: 15px; /* Smaller font size */
+  color: #666;
+  margin-bottom: 20px; /* Reduced margin */
+  text-align: center;
+  font-family: 'Text Me One', sans-serif;
+  font-weight: 600;
+}
+
+/* App Store Buttons */
+.app-store-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+.app-store img, 
+.google-play img {
+  height: 40px; /* Slightly smaller */
+  width: auto;
+}
+
+/* CSS for positioning content below the showcase */
+.precise-game-showcase + * {
+  margin-top: 40px; /* Creates space below the showcase */
+}
+
+/* Responsive Adjustments */
+@media (max-width: 1200px) {
+  .phone {
+    width: 160px;
+  }
+  
+  .phones-container {
+    left: -60px; /* Less overlap on smaller screens */
+  }
+}
+
+@media (max-width: 992px) {
+  .precise-game-showcase {
+    flex-direction: column;
+    padding: 25px;
+    min-height: auto;
+  }
+  
+  .showcase-left, 
+  .showcase-right {
+    width: 100%;
+  }
+  
+  .showcase-left {
+    margin-bottom: 30px; /* Reduced margin */
+  }
+  
+  .showcase-right {
+    padding-left: 0;
+  }
+  
+  /* Center phones on mobile, with top overlap */
+  .phones-container {
+    left: 0;
+    margin-top: -80px; /* Overlap the top instead of left on mobile */
+    justify-content: center;
+  }
+  
+  .phone {
+    width: 140px;
+  }
+}
+
+@media (max-width: 768px) {
+  .precise-game-showcase {
+    width: 95%;
+    padding-top: 90px; /* Reduced padding */
+  }
+  
+  .phones-container {
+    margin-top: -110px;
+  }
+  
+  .phone {
+    width: 120px;
+    margin-right: -20px;
+    border-width: 6px;
+  }
+  
+  .game-icon {
+    width: 65px;
+    height: 65px;
+  }
+  
+  .game-info h4 {
+    font-size: 22px;
+    margin-bottom: 15px;
+  }
+  
+  .app-store img, 
+  .google-play img {
+    height: 36px;
+  }
+}
+
+@media (max-width: 576px) {
+  .phone {
+    width: 100px;
+    margin-right: -15px;
+    border-width: 5px;
+  }
+}
+   /* Spacer for additional vertical space */
+.spacer-section {
+  height: 50px; /* Adjust this value to control the amount of space */
+  width: 100%;
+  clear: both;
+}
+
+/* Optional: Add a subtle divider line */
+.spacer-section.with-line {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  margin: 0 auto 50px;
+  width: 80%;
+}
+/* ===========================
+   Portfolio Section Styling
+   =========================== */
+
+/* Portfolio section container */
+.portfolio {
+  padding: 60px 0;
+  background-color: var(--background-color);
+}
+
+/* Row adjustment to reduce spacing */
+.portfolio .row {
+  margin-right: -10px;
+  margin-left: -10px;
+}
+
+/* Column adjustment to reduce spacing */
+.portfolio .col-lg-4, 
+.portfolio .col-md-6 {
+  padding-right: 10px;
+  padding-left: 10px;
+}
+
+/* Portfolio card styling */
+.portfolio-card {
+  background-color: var(--surface-color);
+  box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.05);
+  border-radius: 12px;
+  overflow: hidden;
+  margin-bottom: 20px;
+  
+  /* Make cards square using aspect-ratio */
+  aspect-ratio: 1/1;
+  
+  /* For browsers that don't support aspect-ratio */
+  position: relative;
+  width: 90%;
+  
+  /* Center content */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 30px;
+}
+
+/* Fallback for browsers without aspect-ratio support */
+.portfolio-card::before {
+  content: "";
+  display: block;
+  padding-top: 100%; /* Creates a square */
+}
+
+.portfolio-card > * {
+  position: absolute;
+  /*top: 15px;
+  left: 15px;
+  right: 15px;
+  bottom: 15px;*/
+}
+
+/* Portfolio image wrapper */
+.portfolio-img-wrapper {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  border-radius: 8px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Portfolio image */
+.portfolio-img {
+  max-width: 100%;
+  max-height: 100%;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  display: block;
+}
+
+/* Responsive Layout Adjustments */
+@media (max-width: 992px) { /* Tablets */
+  .portfolio .col-lg-4 {
+    flex: 1 1 45%;
+    max-width: 45%;
+  }
+}
+
+@media (max-width: 768px) { /* Mobile */
+  .portfolio .col-lg-4 {
+    flex: 1 1 100%;
+    max-width: 100%;
+  }
+}
+
+
+/* new cases for texture mapping */
+/* Portfolio Subtitle Styling */
+.portfolio-subtitle {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.portfolio-subtitle h3 {
+  font-size: 24px;
+  font-weight: 500;
+  position: relative;
+  display: inline-block;
+  padding-bottom: 10px;
+  font-family: 'Text Me One', sans-serif;
+  color: var(--heading-color);
+}
+
+.portfolio-subtitle h3::after {
+  content: '';
+  position: absolute;
+  display: block;
+  width: 50px;
+  height: 2px;
+  background: var(--accent-color);
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/* Portfolio Description Styling */
+.portfolio-description p {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 100;
+  font-size: 16px;
+  line-height: 1.6;
+  color: var(--default-color);
+  max-width: 100%; /* Changed from 800px to 100% for full width */
+  margin: 0 auto;
+}
+
+/* ===========================
+   Topology Showcase Section
+   =========================== */
+/* Topology Image Styling */
+.topology-img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px; /* Optional: if you want slightly rounded corners */
+}
+
 /*--------------------------------------------------------------
 # Portfolio Section
 --------------------------------------------------------------*/
+
+
 .portfolio .portfolio-filters {
   padding: 0;
   margin: 0 auto 20px auto;
@@ -1438,7 +1966,7 @@ section,
 .portfolio-details .portfolio-info .btn-visit:hover {
   background: color-mix(in srgb, var(--accent-color), transparent 20%);
 }
-
+/*
 .portfolio-details .portfolio-description h2 {
   font-size: 26px;
   font-weight: 700;
@@ -1503,7 +2031,7 @@ section,
   margin: 0 0 15px 0 0 0;
   padding: 0;
 }
-
+*/
 /*--------------------------------------------------------------
 # Service Details Section
 --------------------------------------------------------------*/
