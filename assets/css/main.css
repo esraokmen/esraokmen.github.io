@@ -76,8 +76,42 @@
 /* Smooth scroll */
 :root {
   scroll-behavior: smooth;
+  --topology-font: 'Montserrat', sans-serif; /* Change to your preferred font */
+  --topology-font-size: 1.3rem; /* Adjust size as needed */
+  --topology-font-weight: 50; /* 400 is normal, 700 is bold */
+  --topology-text-color: #333333; /* Change color as needed */
 }
 
+
+.topology-container {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+}
+
+.topology-text {
+  position: absolute;
+  transform: translateY(-50%);
+  font-family: var(--topology-font, 'Arial, sans-serif');
+  font-size: var(--topology-font-size, 1.8rem);
+  font-weight: var(--topology-font-weight, 400);
+  color: var(--topology-text-color, #333333);
+  line-height: 1.2;
+}
+
+.topology-text-left {
+  top: 52%;
+  left: -2%;
+  transform: translate(-100%, -20%);
+  text-align: right;
+}
+
+.topology-text-right {
+  right: 7%;
+  top: 50%;
+  transform: translate(100%, -20%);
+  text-align: right;
+}
 
 /* ===========================
    Responsive
@@ -1147,7 +1181,7 @@ section,
 /* Phones Container */
 .phones-container {
   position: relative;
-  left: -80px; /* This creates the overlap with the left edge */
+  left: -40px; /* This creates the overlap with the left edge */
   display: flex;
 }
 
