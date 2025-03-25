@@ -223,7 +223,7 @@
     width: 80px;
     height: 80px;
     object-fit: contain;
-    filter: grayscale(100%) brightness(80%) contrast(90%);
+    /*filter: grayscale(100%) brightness(80%) contrast(90%);*/
     transition: filter 0.3s ease-in-out, transform 0.3s ease-in-out;
   }
   
