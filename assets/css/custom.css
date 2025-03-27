@@ -1,0 +1,70 @@
+/* Hand Painting Carousel Styling */
+#handPaintingCarousel {
+    margin-bottom: 40px;
+  }
+  
+  /* Make the carousel indicators more visible */
+  #handPaintingCarousel .carousel-indicators {
+    bottom: -40px;
+  }
+  
+  #handPaintingCarousel .carousel-indicators button {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: rgba(0, 0, 0, 0.2);
+    margin: 0 5px;
+  }
+  
+  #handPaintingCarousel .carousel-indicators button.active {
+    background-color: var(--accent-color);
+  }
+  
+  /* Style carousel controls to match site theme */
+  #handPaintingCarousel .carousel-control-prev,
+  #handPaintingCarousel .carousel-control-next {
+    width: 40px;
+    height: 40px;
+    background-color: var(--accent-color);
+    border-radius: 50%;
+    top: 50%;
+    transform: translateY(-50%);
+    opacity: 0.7;
+  }
+  
+  #handPaintingCarousel .carousel-control-prev {
+    left: -50px;
+  }
+  
+  #handPaintingCarousel .carousel-control-next {
+    right: -50px;
+  }
+  
+  #handPaintingCarousel .carousel-control-prev:hover,
+  #handPaintingCarousel .carousel-control-next:hover {
+    opacity: 1;
+  }
+  
+  /* Ensure portfolio cards maintain aspect ratio in carousel */
+  #handPaintingCarousel .portfolio-card {
+    aspect-ratio: 1/1;
+    width: 100%;
+    margin: 0 auto;
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    #handPaintingCarousel .carousel-control-prev,
+    #handPaintingCarousel .carousel-control-next {
+      width: 30px;
+      height: 30px;
+    }
+    
+    #handPaintingCarousel .carousel-control-prev {
+      left: -15px;
+    }
+    
+    #handPaintingCarousel .carousel-control-next {
+      right: -15px;
+    }
+  }

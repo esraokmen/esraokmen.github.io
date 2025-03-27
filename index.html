@@ -28,6 +28,8 @@
 
   <!-- Main CSS File -->
   <link href="assets/css/main.css" rel="stylesheet">
+  <!-- Custom CSS File -->
+  <link href="assets/css/custom.css" rel="stylesheet">
 
 </head>
 
@@ -259,7 +261,6 @@
   </div>
 </div>-->
 
-<!-- GIF -->
 <!-- GIF Showcase Section -->
 <div class="row justify-content-center mt-5 mb-5">
   <div class="col-lg-8 col-md-10">
@@ -276,7 +277,6 @@
 </div>
 <!-- /GIF -->
 
-<!-- /GIF-->
 <br><br>
         <!-- Second row of portfolio cards -->
         <div class="row justify-content-center">
@@ -329,9 +329,7 @@
       </div>
     </div>
 
-
-
-    <!-- Hand Painting Section Title -->
+<!-- Hand Painting Section with Image Carousel -->
 <div class="row justify-content-center mt-5">
   <div class="col-12">
     <div class="portfolio-subtitle">
@@ -343,45 +341,74 @@
   </div>
 </div>
 
-<!-- Hand Painting Cards -->
+<!-- Hand Painting Carousel -->
 <div class="row justify-content-center mb-5">
-  <!-- Hand Painting Item 1 -->
-  <div class="col-lg-4 col-md-6">
-    <div class="portfolio-card">
-      <div class="portfolio-img-wrapper">
-        <img src="assets/img/portfolio/24.png" class="portfolio-img" alt="Hand Painted Model 1">
+  <div class="col-lg-10 col-md-12">
+    <!-- Carousel Container -->
+    <div id="handPaintingCarousel" class="carousel slide" data-bs-ride="false">
+      <!-- Carousel Indicators -->
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#handPaintingCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#handPaintingCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+        <!-- Add more indicators as needed -->
       </div>
+      
+      <!-- Carousel Items -->
+      <div class="carousel-inner">
+        <!-- First Slide - First Pair of Images -->
+        <div class="carousel-item active">
+          <div class="row">
+            <div class="col-md-6 mb-3">
+              <div class="portfolio-card">
+                <div class="portfolio-img-wrapper">
+                  <img src="assets/img/portfolio/24.png" class="portfolio-img" alt="Hand Painted Model 1">
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6 mb-3">
+              <div class="portfolio-card">
+                <div class="portfolio-img-wrapper">
+                  <img src="assets/img/portfolio/25.png" class="portfolio-img" alt="Hand Painted Model 2">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Second Slide - Second Pair of Images -->
+        <div class="carousel-item">
+          <div class="row">
+            <div class="col-md-6 mb-3">
+              <div class="portfolio-card">
+                <div class="portfolio-img-wrapper">
+                  <img src="assets/img/portfolio/27.png" class="portfolio-img" alt="Hand Painted Model 3">
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6 mb-3">
+              <div class="portfolio-card">
+                <div class="portfolio-img-wrapper">
+                  <img src="assets/img/portfolio/26.png" class="portfolio-img" alt="Hand Painted Model 4">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+      </div>
+      
+      <!-- Carousel Navigation Controls -->
+      <button class="carousel-control-prev" type="button" data-bs-target="#handPaintingCarousel" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#handPaintingCarousel" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
     </div>
   </div>
-
-  <!-- Hand Painting Item 2 -->
-  <div class="col-lg-4 col-md-6">
-    <div class="portfolio-card">
-      <div class="portfolio-img-wrapper">
-        <img src="assets/img/portfolio/25.png" class="portfolio-img" alt="Hand Painted Model 2">
-      </div>
-    </div>
-  </div>
-
-  <!--<div class="spacer-section"></div>
-
-  <div class="col-lg-4 col-md-6">
-    <div class="portfolio-card">
-      <div class="portfolio-img-wrapper">
-        <img src="assets/img/portfolio/27.png" class="portfolio-img" alt="Hand Painted Model 3">
-      </div>
-    </div>
-  </div>
-
-  <div class="col-lg-4 col-md-6">
-    <div class="portfolio-card">
-      <div class="portfolio-img-wrapper">
-        <img src="assets/img/portfolio/26.png" class="portfolio-img" alt="Hand Painted Model 4">
-      </div>
-    </div>
-  </div>-->
-
-
+</div>
 
 <!-- Workflow Process Section -->
 
