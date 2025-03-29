@@ -454,6 +454,9 @@ body {
     padding: 30px 20px;
     text-align: center;
     transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    height: 300px; /* Fixed height for all cards */
+    display: flex;
+    flex-direction: column;
   }
   
   .game-card:hover {
@@ -474,8 +477,9 @@ body {
     overflow: hidden;
     transition: all 0.3s ease-in-out;
     margin: 0 auto 10px auto;
+    flex-shrink: 0; /* Prevent shrinking */
   }
-
+  
   .game-icon-wrapper img {
     width: 100px; /* Adjust size if needed */
     height: 100px;
@@ -502,9 +506,12 @@ body {
   .game-title {
     font-size: 1.2rem;
     margin-top: 10px;
+    margin-bottom: 15px;
     font-weight: bold;
     color: var(--heading-color);
     transition: color 0.3s ease-in-out;
+    flex-shrink: 0; /* Prevent shrinking */
+    height: 30px; /* Fixed height for title */
   }
   
   /* Game Description */
@@ -515,6 +522,17 @@ body {
     max-width: 250px;
     margin: 0 auto;
     line-height: 1.5;
+    flex-grow: 1; /* Fill available space */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  
+  .game-description p {
+    display: -webkit-box;
+    -webkit-line-clamp: 3; /* Limit to 3 lines */
+    -webkit-box-orient: vertical;
+    overflow: hidden;
   }
   
   /* Responsive Layout Adjustments */
@@ -522,6 +540,10 @@ body {
     .games .col-lg-3 {
       flex: 1 1 45%;
       max-width: 45%;
+    }
+    
+    .game-card {
+      height: 320px; /* Slightly taller on tablets */
     }
   }
   
@@ -532,6 +554,10 @@ body {
       text-align: center;
     }
   
+    .game-card {
+      height: 280px; /* Slightly shorter on mobile */
+    }
+    
     .game-icon-wrapper {
       width: 80px;
       height: 80px;
