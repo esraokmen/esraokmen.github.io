@@ -33,6 +33,7 @@
 
   });
 
+  
   /**
    * Toggle mobile nav dropdowns
    */
@@ -203,6 +204,36 @@
       }
     }
   });
+
+  /**
+   * Handle video playback in carousel
+   */
+  document.addEventListener('DOMContentLoaded', function() {
+    const textureVideoCarousel = document.getElementById('textureVideoCarousel');
+    if (textureVideoCarousel) {
+      // Initial play for first video
+      const firstVideo = document.querySelector('#textureVideoCarousel .carousel-item.active video');
+      if (firstVideo) {
+        firstVideo.play().catch(e => console.log('Video play error:', e));
+      }
+      
+      // Handle slide event
+      textureVideoCarousel.addEventListener('slid.bs.carousel', function() {
+        // Play the active video (note: using 'slid' instead of 'slide' - after transition completes)
+        const activeVideo = document.querySelector('#textureVideoCarousel .carousel-item.active video');
+        if (activeVideo) {
+          activeVideo.play().catch(e => console.log('Video play error:', e));
+        }
+        
+        // Pause all non-active videos
+        const inactiveVideos = document.querySelectorAll('#textureVideoCarousel .carousel-item:not(.active) video');
+        inactiveVideos.forEach(video => {
+          video.pause();
+        });
+      });
+    }
+  });
+
 
   /**
    * Navmenu Scrollspy

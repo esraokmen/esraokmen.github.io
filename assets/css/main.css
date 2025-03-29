@@ -26,6 +26,14 @@
   }
 }
 
+.carousel-item,
+.text-center,
+.video-showcase {
+  background: transparent !important;
+}
+body {
+  background-color: #f0f0f0; /* or any non-black color */
+}
 
 /*--------------------------------------------------------------
 # Font & Color Variables
@@ -112,6 +120,263 @@
   transform: translate(100%, -20%);
   text-align: right;
 }
+
+
+/* Increase space for carousel arrows */
+#videoCarousel .carousel-control-prev {
+  left: -60px; /* Move further away from the content */
+}
+
+#videoCarousel .carousel-control-next {
+  right: -60px; /* Move further away from the content */
+}
+
+/* Make the arrows more visible */
+#videoCarousel .carousel-control-prev-icon,
+#videoCarousel .carousel-control-next-icon {
+  width: 30px;
+  height: 30px;
+  background-size: 100%;
+}
+
+/* Add container padding to make room for arrows */
+#videoCarousel {
+  padding: 0 60px; /* Add padding on sides to make room for arrows */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  #videoCarousel {
+    padding: 0 40px;
+  }
+  
+  #videoCarousel .carousel-control-prev {
+    left: -35px;
+  }
+  
+  #videoCarousel .carousel-control-next {
+    right: -35px;
+  }
+}
+
+#videoCarousel .carousel-control-prev,
+#videoCarousel .carousel-control-next {
+  opacity: 1;
+  background-color: rgba(227, 115, 131, 0.7);
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+
+/* 3D Character Workflow Styling */
+.character-workflow {
+  padding: 0px 0;
+  position: relative;
+}
+
+.character-process {
+  position: relative;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.character-stages {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  min-height: 50px; /* Adjust as needed */
+}
+
+.character-stage {
+  position: relative;
+  width: 33.33%;
+  display: flex;
+  justify-content: center;
+}
+
+.stage-circle {
+  position: absolute;
+  width: 220px;
+  height: 220px;
+  background-color: #f5f5f5;
+  border-radius: 50%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+}
+
+.character-img {
+  position: relative;
+  z-index: 2;
+  height: 320px; /* Adjust based on your image size */
+  width: auto;
+}
+
+.stage-arrow {
+  position: absolute;
+  right: -40px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 70px;
+  z-index: 3;
+}
+
+/* Adjust the parent container first */
+.character-captions {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  margin-top: 20px;
+  width: 100%; /* Ensure full width */
+}
+
+/* Then adjust the caption container */
+.stage-caption {
+  width: 33.33%;
+  padding: 0 15px;
+  /* Remove any potential flex constraints */
+  min-width: 200px; /* Set minimum width */
+}
+
+/* Finally, adjust the paragraph */
+.stage-caption p {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 200;
+  font-size: 13px;
+  color: #666;
+  line-height: 1.4;
+  width: 200px; /* Set a wider fixed width */
+  margin: 0 auto; /* Keep it centered */
+  /* You can increase this to any value you need */
+}
+
+/* Individual caption adjustments if needed */
+.caption-1 p {
+  width: 220px; /* Example - adjust as needed */
+}
+
+.caption-2 p {
+  width: 250px; /* Example - adjust as needed */
+}
+
+.caption-3 p {
+  width: 220px; /* Example - adjust as needed */
+}
+
+
+/* Responsive styles */
+@media (max-width: 992px) {
+  .stage-circle {
+    width: 220px;
+    height: 220px;
+  }
+  
+  .character-img {
+    height: 350px;
+  }
+  
+  .stage-arrow {
+    width: 50px;
+    right: -10px;
+  }
+}
+
+@media (max-width: 768px) {
+  .character-stages {
+    flex-direction: column;
+    gap: 50px;
+    min-height: auto;
+  }
+  
+  .character-stage {
+    width: 100%;
+  }
+  
+  .character-captions {
+    flex-direction: column;
+    gap: 30px;
+  }
+  
+  .stage-caption {
+    width: 100%;
+  }
+  
+  .stage-arrow {
+    right: auto;
+    top: auto;
+    bottom: -40px;
+    transform: rotate(90deg);
+  }
+  
+  .character-img {
+    height: 300px;
+  }
+}
+
+/* Texture Mapping Video Carousel Styling */
+#textureVideoCarousel {
+  margin-bottom: 40px;
+  position: relative;
+}
+
+#textureVideoCarousel .carousel-indicators {
+  bottom: -30px;
+}
+
+#textureVideoCarousel .carousel-indicators button {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: rgba(0, 0, 0, 0.2);
+  margin: 0 5px;
+}
+
+#textureVideoCarousel .carousel-indicators button.active {
+  background-color: var(--accent-color);
+}
+
+#textureVideoCarousel .carousel-control-prev,
+#textureVideoCarousel .carousel-control-next {
+  width: 40px;
+  height: 40px;
+  background-color: var(--accent-color);
+  border-radius: 50%;
+  top: 50%;
+  transform: translateY(-50%);
+  opacity: 0.7;
+}
+
+#textureVideoCarousel .carousel-control-prev {
+  left: 5%;
+}
+
+#textureVideoCarousel .carousel-control-next {
+  right: 5%;
+}
+
+#textureVideoCarousel .carousel-control-prev:hover,
+#textureVideoCarousel .carousel-control-next:hover {
+  opacity: 1;
+}
+
+.video-caption {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 200;
+  font-size: 0.9rem;
+  color: var(--default-color);
+  margin-top: 10px;
+}
+
+/* Make sure videos pause when not visible */
+.carousel-item:not(.active) video {
+  display: none;
+}
+
 
 /* ===========================
    Responsive
