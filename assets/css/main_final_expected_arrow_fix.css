@@ -1951,3 +1951,18 @@ background-color: gray !important;
   padding: 0;
   box-shadow: none !important;
 }
+
+/* Final arrow style using Bootstrap arrow but flat background */
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  background-color: #d3d3d3 !important;
+  border-radius: 50%;
+  width: 48px;
+  height: 48px;
+  background-size: 60% 60%;
+  background-position: center;
+  background-repeat: no-repeat;
+  box-shadow: none !important;
+  filter: brightness(0) invert(1); /* Keeps arrow white */
+  padding: 0;
+}
