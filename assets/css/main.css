@@ -119,7 +119,127 @@ body {
   text-align: right;
 }
 
-/* Video Carousel Styling */
+
+/*--------------------------------------------------------------
+# Concept Art Styling 
+--------------------------------------------------------------*/
+/* Concept Art Section Styling - UPDATED */
+.concept-art {
+  padding: 60px 0;
+  background-color: var(--background-color);
+}
+
+/* Concept Art Card Styling */
+.concept-art-card {
+  background-color: var(--surface-color);
+  box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.05);
+  border-radius: 12px;
+  overflow: hidden;
+  margin-bottom: 20px;
+  padding: 15px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.concept-art-card img {
+  border-radius: 8px;
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+/* Concept Art Carousel Styling */
+#conceptArtCarousel {
+  margin-bottom: 60px;
+  position: relative;
+}
+
+#conceptArtCarousel .carousel-indicators {
+  bottom: -40px;
+}
+
+#conceptArtCarousel .carousel-indicators button {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: rgba(128, 128, 128, 0.5) !important; /* Gray indicator with !important */
+  margin: 0 5px;
+}
+
+#conceptArtCarousel .carousel-indicators button.active {
+  background-color: var(--accent-color) !important; /* Use accent color for active with !important */
+}
+
+#conceptArtCarousel .carousel-control-prev,
+#conceptArtCarousel .carousel-control-next {
+  width: 40px;
+  height: 40px;
+  background-color: gray !important; /* Match the style in Image 1 */
+  border-radius: 50%;
+  top: 50%;
+  transform: translateY(-50%);
+  opacity: 0.7;
+}
+
+#conceptArtCarousel .carousel-control-prev {
+  left: -60px;
+}
+
+#conceptArtCarousel .carousel-control-next {
+  right: -60px;
+}
+
+#conceptArtCarousel .carousel-control-prev:hover,
+#conceptArtCarousel .carousel-control-next:hover {
+  opacity: 1;
+}
+
+/* Add these styles to fix the carousel controls */
+#conceptArtCarousel .carousel-control-prev-icon,
+#conceptArtCarousel .carousel-control-next-icon {
+  background-color: transparent !important; /* Override any background from other styles */
+}
+
+/* Responsive Adjustments */
+@media (max-width: 992px) {
+  #conceptArtCarousel .carousel-control-prev,
+  #conceptArtCarousel .carousel-control-next {
+    width: 35px;
+    height: 35px;
+  }
+  
+  #conceptArtCarousel .carousel-control-prev {
+    left: -20px;
+  }
+  
+  #conceptArtCarousel .carousel-control-next {
+    right: -20px;
+  }
+}
+
+@media (max-width: 768px) {
+  #conceptArtCarousel .carousel-control-prev,
+  #conceptArtCarousel .carousel-control-next {
+    width: 30px;
+    height: 30px;
+  }
+  
+  #conceptArtCarousel .carousel-control-prev {
+    left: 0px;
+  }
+  
+  #conceptArtCarousel .carousel-control-next {
+    right: 0px;
+  }
+}
+
+
+/*--------------------------------------------------------------
+# Video Carousel Styling
+--------------------------------------------------------------*/
+
 #videoCarousel .carousel-control-prev {
   left: 20px; /* Move further away from the content */
 }
